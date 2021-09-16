@@ -1,0 +1,221 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.mb{
+    padding-top:15px ;
+}
+
+
+.header{
+   
+    width: 100%;
+    display: flex;
+    padding: 15px;
+    background-color: white;
+    box-shadow: 2px 2px 5px rgb(71, 71, 71);
+    position: fixed;
+    z-index: 1;
+    
+}
+
+.nav{
+    position: fixed;
+    right: 0;
+}
+
+.header a{
+    color: black;
+    text-decoration: none;
+    padding: 16px;
+    letter-spacing: 4px;
+}
+
+.header a:hover{
+    background-color: rgb(226, 226, 226);
+}
+
+.foto{
+    max-width: 100%;
+}
+.texto{
+    font-size: 30px;
+    color: white;
+    letter-spacing: 4px;
+}
+
+.texto strong{
+    background-color: rgba(0, 0, 0, 0.637);
+    padding: 10px 15px;
+}
+.texto{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+
+h3{
+    margin: 40px 26px;
+    border-bottom: 1px solid lightgray;
+    padding-bottom: 15px;
+    font-weight: 300;
+}
+
+
+.projetos{
+    display: grid;
+    margin: 0px 26px;
+    gap: 20px;
+    grid-template-areas:
+    "item1 item2 item3 item4"
+    "item5 item6 item7 item8"
+}
+
+.topleft{
+    position: absolute;
+    background-color: black;
+    color: white;
+    padding: 10px 20px;
+  
+}
+.projetos img{
+    max-width: 100%;
+}
+
+.item1{
+    grid-area: item1;
+}
+.item2{
+    grid-area: item2;
+}
+.item3{
+    grid-area: item3;
+}
+.item4{
+    grid-area: item4;
+}
+.item5{
+    grid-area: item5;
+}
+.item6{
+    grid-area: item6;
+}
+.item7{
+    grid-area: item7;
+}
+.item8{
+    grid-area: item8;
+}
+.p{
+    margin: 0px 26px;
+}
+
+.about{
+    display: grid;
+    gap: 20px;
+    margin: 0px 26px;
+    grid-template-areas:
+    "pessoa1 pessoa2 pessoa3 pessoa4"
+}
+.about img{
+    max-width: 100%;
+}
+.about button{
+    width: 100%;
+    padding: 10px;
+    border: none;
+}
+.about button:hover, .contact button:hover{
+    background-color: grey;
+    cursor: pointer;
+}
+
+.contact input{
+    width: 100%;
+    margin-bottom:10px;
+    padding: 10px;
+    border: 1px solid lightgray
+}
+
+.contact button{
+    color: white;
+    background-color: black;
+    padding: 10px;
+    border: none;
+    margin-top:10px;
+    margin-bottom: 20px;
+}
+
+
+.pessoa1{
+    grid-area: pessoa1;
+}
+.pessoa2{
+    grid-area: pessoa2;
+}
+.pessoa3{
+    grid-area: pessoa3;
+}
+.pessoa4{
+    grid-area: pessoa4;
+}
+
+.mapa img{
+    width: 100%;
+}
+
+.footer{
+    color: white;
+    background-color: black;
+    padding: 25px;
+    text-align: center; 
+}
+
+@media screen and (max-width:595px) {
+    .texto strong{
+       display: block;
+       text-align: center;
+    }
+    .projetos{
+        grid-template-areas:
+        "item1 item2"
+        "item3 item4"
+        "item5 item6"
+        "item7 item8"
+    }
+    .about{
+        
+        grid-template-areas:
+        "pessoa1 pessoa2"
+        "pessoa3 pessoa4"
+    }
+}
+
+@media screen and (max-width:520px) {
+    .projetos{
+        grid-template-areas:
+        "item1"
+         "item2"
+        "item3"
+        "item4"
+        "item5" 
+        "item6"
+        "item7" 
+        "item8"
+    }
+    .about{
+        
+        grid-template-areas:
+        "pessoa1" 
+        "pessoa2"
+        "pessoa3" 
+        "pessoa4"
+    }
+    .nav{
+        display: none;
+    }
+}
